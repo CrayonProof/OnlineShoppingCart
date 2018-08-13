@@ -12,8 +12,14 @@ public:
 	double GetPrice();
 	void SetQuantity(int quantity);
 	int GetQuantity();
+	string GetRundown();
+	void SetDescription(string description);
+	string GetDescription();
+	void PrintCost();
+	void PrintDescription();
 private:
 	string itemName;
 	double itemPrice;
 	int itemQuantity;
+	string itemDescription;
 };
