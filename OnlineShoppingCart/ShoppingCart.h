@@ -10,15 +10,17 @@ public:
 	ShoppingCart();
 	ShoppingCart(string customerName, string date);
 	~ShoppingCart();
+	void SetName(string customerName);
+	void SetDate(string date);
 	string GetName();
 	string GetDate();
 	bool AddItem(ItemToPurchase item);
 	bool RemoveItem(string itemName);
 	bool UpdateQuantity(string itemName, int newQuantity);
 	int GetItemsCount();
-	int GetTotalCost();
-	void PrintTotals();
-	void PrintDescriptions();
+	double GetTotalCost();
+	bool PrintTotals();
+	bool PrintDescriptions();
 
 private:
 	string customerName;

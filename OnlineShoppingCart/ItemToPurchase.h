@@ -1,10 +1,12 @@
 #include <string>
 using namespace std;
 
+#pragma once
 class ItemToPurchase
 {
 public:
 	ItemToPurchase();
+	ItemToPurchase(string itemName, string itemDescription, double price, int quiantity);
 	~ItemToPurchase();
 	void SetName(string name);
 	string GetName();

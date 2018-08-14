@@ -2,6 +2,7 @@
 #include "ItemToPurchase.h"
 #include <string>
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 string itemName;
@@ -12,10 +13,20 @@ string itemDescription;
 ItemToPurchase::ItemToPurchase()
 {
 	itemName = "none";
+	itemDescription = "none";
 	itemPrice = 0.0;
 	itemQuantity = 0;
+
 }
 
+ItemToPurchase::ItemToPurchase(string itemName, string itemDescription, double itemPrice, int itemQuantity)
+{
+	cout << fixed << setprecision(2);
+	this->itemName = itemName;
+	this->itemDescription = itemDescription;
+	this->itemPrice = itemPrice;
+	this->itemQuantity = itemQuantity;
+}
 
 ItemToPurchase::~ItemToPurchase()
 {
@@ -47,6 +58,9 @@ int ItemToPurchase::GetQuantity() {
 
 string ItemToPurchase::GetRundown() {
 
+	std::cout << std::fixed;
+	std::cout << std::setprecision(2);
+
 	return this->GetName() + " " + std::to_string(this->GetQuantity()) +
 		" @ $" + std::to_string(this->GetPrice()) + " = $" +
 		std::to_string(((double)this->GetPrice())*(this->GetQuantity()));
@@ -61,9 +75,17 @@ string ItemToPurchase::GetDescription() {
 }
 
 void ItemToPurchase::PrintCost() {
-	cout << this->GetRundown() << endl;
+	cout << fixed << setprecision(2);
+
+	cout << this->GetName() << " " << std::to_string(this->GetQuantity()) <<
+		" @ $" << this->GetPrice() << " = $" <<
+		((double)this->GetPrice())*(this->GetQuantity()) << endl;
 }
 
 void ItemToPurchase::PrintDescription() {
-	cout << itemDescription << endl;
+
+	std::cout << std::fixed;
+	std::cout << std::setprecision(2);
+
+	cout << itemName << ": " << itemDescription << endl;
 }

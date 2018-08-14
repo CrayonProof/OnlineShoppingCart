@@ -1,2 +1,6 @@
-﻿  OnlineShoppingCart.cpp
+﻿  ItemToPurchase.cpp
+  OnlineShoppingCart.cpp
+  ShoppingCart.cpp
+c:\users\micky\source\repos\onlineshoppingcart\onlineshoppingcart\shoppingcart.cpp(114): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
   OnlineShoppingCart.vcxproj -> C:\Users\micky\source\repos\OnlineShoppingCart\Debug\OnlineShoppingCart.exe
