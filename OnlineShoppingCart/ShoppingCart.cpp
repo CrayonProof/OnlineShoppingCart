@@ -1,4 +1,4 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "ShoppingCart.h"
 #include <string>
 #include <iostream>

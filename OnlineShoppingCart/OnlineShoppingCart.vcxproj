@@ -154,7 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ItemToPurchase.cpp" />
-    <ClCompile Include="OnlineShoppingCart.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="ShoppingCart.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
